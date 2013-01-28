@@ -1,29 +1,26 @@
 # Rgrmux
 
-TODO: Write a gem description
+An additional formatter for RSpec that sends messages to Tmux.
+
+This is not original work and there's all sorts of hardcoded ugliness.
+
+Credits:
+  - @thedelchop - https://gist.github.com/4195788
+  - https://github.com/guard/guard/blob/master/lib/guard/notifiers/tmux.rb
+  - https://github.com/tpope/fivemat
 
 ## Installation
 
-Add this line to your application's Gemfile:
-
-    gem 'rgrmux'
-
-And then execute:
-
-    $ bundle
-
-Or install it yourself as:
-
-    $ gem install rgrmux
+Clone the repo, build the gem, and install it.
 
 ## Usage
 
-TODO: Write usage instructions here
+This formatter is meant to be used in addition to another formatter.
 
-## Contributing
+E.g. add the following to `~/.rspec`:
 
-1. Fork it
-2. Create your feature branch (`git checkout -b my-new-feature`)
-3. Commit your changes (`git commit -am 'Add some feature'`)
-4. Push to the branch (`git push origin my-new-feature`)
-5. Create new Pull Request
+    --format documentation
+    --format Rgrmux
+
+## TODO
+  - add formatters for Minitest & Cucumber
