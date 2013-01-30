@@ -1,11 +1,11 @@
-require 'rspec/core/formatters/progress_formatter'
+require 'rspec/core/formatters/base_formatter'
 
 module Rgrmux
   # Credits:
   #   @thedelchop - https://gist.github.com/4195788
   #   https://github.com/guard/guard/blob/master/lib/guard/notifiers/tmux.rb
   #
-  class RSpec < ::RSpec::Core::Formatters::ProgressFormatter
+  class RSpec < ::RSpec::Core::Formatters::BaseFormatter
 
     def initialize(output)
       @tmux_color = ""
