@@ -41,9 +41,8 @@ module Rgrmux
         system "tmux set message-bg #{@tmux_color}"
         system "tmux set display-time 3000"
         system "tmux display-message '#{@tmux_message.gsub('`','').gsub("'",'')}'"
-        system "tmux set quiet off"
+        system "tmux set quiet off >/dev/null"
       end
-      super
     end
   end
 end
