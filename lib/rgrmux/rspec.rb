@@ -24,10 +24,10 @@ module Rgrmux
       summary << ", " << pluralize(failure_count, "failure")
       summary << ", #{pending_count} pending" if pending_count > 0
 
-      if pending_count > 0
-        @tmux_color = "yellow"
-      elsif failure_count > 0
+      if failure_count > 0
         @tmux_color = "red"
+      elsif pending_count > 0
+        @tmux_color = "yellow"
       else
         @tmux_color = "green"
       end
